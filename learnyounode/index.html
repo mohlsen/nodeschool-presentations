@@ -4,10 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>reveal.js - The HTML Presentation Framework</title>
-
-        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-        <meta name="author" content="Hakim El Hattab">
+        <title>Welcome - Learn you Node</title>
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -15,13 +12,59 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
         <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="css/theme/black.css" id="theme">
+        <link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
         <!-- Code syntax highlighting -->
         <link rel="stylesheet" href="lib/css/zenburn.css">
 
         <style type="text/css">
-            .terminal { text-align: left; }
+            /*.terminal { text-align: left; }
+             text editor styles */
+            .terminal {
+              display: block;
+              margin: auto;
+              border-radius: 10px;
+              box-shadow: rgba(0, 0, 0, 0.8) 0px 20px 70px;
+              clear: both;
+              overflow: hidden;
+              -webkit-transition: all 0.5s ease-out;
+              -moz-transition: all 0.5s ease-out;
+              -ms-transition: all 0.5s ease-out;
+              -o-transition: all 0.5s ease-out;
+              transition: all 0.5s ease-out; }
+
+            .terminal-title {
+              padding: 5px 0 !important;
+              font-family: "Lucida Grande", sans-serif !important;
+              font-size: 0.75em !important;
+              color: black;
+              text-align: center;
+              text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 0px;
+              background-color: #f8f8f8;
+              background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
+              background-image: -moz-linear-gradient(top, #e8e8e8, #bcbbbc);
+              background-image: linear-gradient(top, #e8e8e8, #bcbbbc);
+              box-shadow: inset rgba(255, 255, 255, 0.7) 0px 1px 1px;
+              border-bottom: #6a6a6a 1px solid; }
+
+            .terminal-text {
+              height: 250px;
+              background-color: rgba(0, 0, 0, 0.85);
+              padding: 10px;
+              color: #f0f0f0;
+              text-shadow: #000 0px 1px 0px;
+              font-family: "Consolas", "Courier New", "Courier";
+              font-size: 1.75em;
+              line-height: 1.40em;
+              font-weight: 500;
+              text-align: left;
+              overflow: hidden;
+              -webkit-transition: all 0.5s ease-out;
+              -moz-transition: all 0.5s ease-out;
+              -ms-transition: all 0.5s ease-out;
+              -o-transition: all 0.5s ease-out;
+              transition: all 0.5s ease-out; }
+
         </style>
 
         <!-- Printing and PDF exports -->
@@ -80,15 +123,17 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
                     <section>
                         <h2>node?</h2>
-                        <div class="terminal type-text">
-                        node -v \n
+                        <div class="terminal">
+                            <div class="terminal-title">terminal - 86 x 29</div>
+                            <div class="terminal-text type-text" title="node -v \n"></div>
                         </div>
                     </section>
 
                     <section>
                         <h2>npm?</h2>
-                        <div class="terminal type-text">
-                        npm -v \n
+                        <div class="terminal">
+                            <div class="terminal-title">terminal - 86 x 29</div>
+                            <div class="terminal-text type-text" title="npm -v \n"></div>
                         </div>
                     </section>
                 </section>
@@ -97,16 +142,19 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     <section><h2>overview</h2></section>
                     <section>
                         <h2>install it</h2>
-                        <div class="terminal type-text">
-                        npm i learnyounode -g \n
+                        <div class="terminal">
+                            <div class="terminal-title">terminal - 86 x 29</div>
+                            <div class="terminal-text type-text" title="npm i learnyounode -g \n"></div>
                         </div>
+                        <br/>
                         <small>i is shorthand for install</small><br/>
                         <small>-g means install it globally</small>
                     </section>
                     <section>
                         <h2 >run it</h2>
-                        <div class="terminal type-text">
-                            learnyounode \n
+                        <div class="terminal">
+                            <div class="terminal-title">terminal - 86 x 29</div>
+                            <div class="terminal-text type-text" title="learnyounode\n"></div>
                         </div>
                     </section>
                     <section>
@@ -120,8 +168,9 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     </section>
                     <section>
                         <h2 >verify it</h2>
-                        <div class="terminal type-text">
-                            learnyounode verify hello_world.js
+                        <div class="terminal">
+                            <div class="terminal-title">terminal - 86 x 29</div>
+                            <div class="terminal-text type-text" title="learnyounode verify hello_world.js \n"></div>
                         </div>
                     </section>
                     <section>
@@ -140,7 +189,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/jquery.teletype.min.js"></script>
         <script>
-
+/*
 
 $( function() {
     $( '.type-text' ).each( function() {
@@ -160,11 +209,26 @@ $( function() {
     } );
 } );
 
-
+*/
 
 Reveal.addEventListener( 'slidechanged', function( event ) {
     // event.previousSlide, event.currentSlide, event.indexh, event.indexv
-    var elementsToType = $(event.currentSlide).find(".type-text");
+    $(event.currentSlide).find(".type-text").each(function() {
+        var items = $( this ).attr('title');
+        console.log('items', items);
+        $(this).empty().teletype( {
+            text: $.map( items.split( ';' ), $.trim ), // List of strings to output.
+            typeDelay: 10, // Minimum delay, in ms, between typing characters.
+            backDelay: 20, // Minimum delay, in ms, between deleting characters.
+            blinkSpeed: 1000, // Interval, in ms, that the cursor will flash.
+            cursor: '▋', // Character used to represent the cursor.
+            delay: 3000, // Time in ms to pause before deleting the current text.
+            preserve: true, // Prevent auto delete of the current string and begin outputting the next string.
+            prefix: '$ ', // Begin each string with this prefix value.
+            loop: 1, // Number of times to loop through the output strings, for unlimited use 0.
+            humanise: true // Add a random delay before each character to represent human interaction.
+        } );
+    });
 
 } );
 
