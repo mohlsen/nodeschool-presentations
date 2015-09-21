@@ -65,6 +65,10 @@
               -o-transition: all 0.5s ease-out;
               transition: all 0.5s ease-out; }
 
+            .editor-image .img {
+                max-width: 100px;
+            }
+
         </style>
 
         <!-- Printing and PDF exports -->
@@ -107,11 +111,15 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     </section>
                     <section>
                         <h2>thanks</h2>
-                        <img src="rockwell.jpg"/>
+                        <a href="http://www.rockwellautomation.com/" target="blank">
+                            <img src="rockwell.jpg"/>
+                        </a>
                     </section>
                     <section>
                         <h2>thanks</h2>
-                        <img src="leandog.png"/>
+                        <a href="http://www.leandog.com/" target="blank">
+                            <img src="leandog.png"/>
+                        </a>
                     </section>
                 </section>
 
@@ -162,6 +170,20 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     </section>
                     <section>
                         <img src="hello_world.png"/>
+                    </section>
+                     <section>
+                        <h4>Oh, you need an editor (or IDE)!</h2>
+                        <div class="editor-image">
+                            <p>Hard Core</p>
+                            <img src="editors/emacs-vim.png"/>
+                        </div>
+                        <div class="editor-image">
+                            <p>Light and Easy</p>
+                            <img class="editor-image" src="editors/sublime.png"/>
+                            <img class="editor-image" src="editors/atom.png"/>
+                            <img class="editor-image" src="editors/vscode.png"/>
+                        </div>
+                        <img src="hello_world_solution.png"/>
                     </section>
                     <section>
                         <img src="hello_world_solution.png"/>
